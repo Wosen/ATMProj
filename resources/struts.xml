@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+ 
+<struts>
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources" />	
+ 
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="atm" class="atmPackage.SAatm">            
+            <result name="error">Home.jsp</result>
+            <result name="accnt">Account.jsp</result>
+            <result name="wtdrw">Withdraw.jsp</result>
+            <result name="dpst">Deposit.jsp</result>
+            <result name="scs">Success.jsp</result>
+        </action>          
+        
+    </package>
+</struts>
